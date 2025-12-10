@@ -3,6 +3,7 @@ import SwiftUI
 
 struct Localization {
     static let currentLanguageCode = Locale.current.language.languageCode?.identifier ?? "en"
+    static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
     
     enum Key: String {
         case settingsTitle = "settings.title"
@@ -73,7 +74,7 @@ struct Localization {
         case .menuQuit: return isTurkish ? "Çıkış" : "Quit"
         case .aboutTitle: return "BrowserBar"
         case .aboutDesc: return isTurkish ? "macOS'te varsayılan tarayıcıyı değiştirmenin en basit yolu." : "The simplest way to toggle your default browser on macOS."
-        case .aboutVersion: return isTurkish ? "Sürüm 1.5.2" : "Version 1.5.2"
+        case .aboutVersion: return isTurkish ? "Sürüm \(Self.appVersion)" : "Version \(Self.appVersion)"
         case .aboutFooter: return "https://github.com/sergenaras"
         }
     }

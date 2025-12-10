@@ -16,20 +16,8 @@ class BrowserManager: ObservableObject {
     @Published var defaultBrowserBundleId: String?
     
     // Persist hidden browsers
-    private let hiddenBrowsersKey = "hiddenBrowsers"
+    private let hiddenBrowsersKey = Constants.Keys.hiddenBrowsers
     
-    // Known popular browsers to check
-    private let knownBrowsers: [(name: String, bundleId: String)] = [
-        ("Safari", "com.apple.Safari"),
-        ("Google Chrome", "com.google.Chrome"),
-        ("Arc", "company.thebrowser.Browser"),
-        ("Firefox", "org.mozilla.firefox"),
-        ("Microsoft Edge", "com.microsoft.edgemac"),
-        ("Brave", "com.brave.Browser"),
-        ("Opera", "com.operasoftware.Opera"),
-        ("DuckDuckGo", "com.duckduckgo.macos.browser"),
-        ("Safari Technology Preview", "com.apple.SafariTechnologyPreview")
-    ]
     
     init() {
         refresh()
@@ -46,7 +34,7 @@ class BrowserManager: ObservableObject {
         let workspace = NSWorkspace.shared
         
         // Use a dummy HTTP URL to find all apps that claim to handle it
-        if let testURL = URL(string: "http://apple.com") {
+        if let testURL = Constants.URLs.connectionTest as URL? {
             let appURLs = workspace.urlsForApplications(toOpen: testURL)
             
             for appURL in appURLs {
@@ -102,7 +90,7 @@ class BrowserManager: ObservableObject {
     
     func checkDefaultBrowser() {
         // Get the default handler for http
-        if let currentUrl = NSWorkspace.shared.urlForApplication(toOpen: URL(string: "http://www.google.com")!) {
+        if let currentUrl = NSWorkspace.shared.urlForApplication(toOpen: Constants.URLs.connectionTest) {
             if let bundle = Bundle(url: currentUrl)?.bundleIdentifier {
                 DispatchQueue.main.async {
                     self.defaultBrowserBundleId = bundle

@@ -21,15 +21,14 @@ struct SettingsView: View {
                     Label(Localization.string(.settingsAbout), systemImage: "info.circle")
                 }
         }
-        .frame(width: 450, height: 250)
+        .frame(width: Constants.Window.width, height: Constants.Window.height)
         .padding()
     }
 }
 
 struct GeneralSettingsView: View {
-    @AppStorage("launchAtLogin") private var launchAtLogin = false
-    @AppStorage("appLanguage") private var appLanguage = "auto"
-    
+    @AppStorage(Constants.Keys.launchAtLogin) private var launchAtLogin = false
+    @AppStorage(Constants.Keys.appLanguage) private var appLanguage = "auto"
     // Hack to force refresh when language changes
     @State private var refreshID = UUID()
     
@@ -93,7 +92,7 @@ struct BrowserListSettingsView: View {
     @State private var allBrowsers: [Browser] = []
     
     // We need to track hidden browsers here to toggle them
-    @AppStorage("hiddenBrowsers") private var hiddenBrowsersData: Data = Data()
+    @AppStorage(Constants.Keys.hiddenBrowsers) private var hiddenBrowsersData: Data = Data()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -134,7 +133,7 @@ struct BrowserListSettingsView: View {
     }
     
     private func isBrowserHidden(_ bundleId: String) -> Bool {
-        let list = UserDefaults.standard.stringArray(forKey: "hiddenBrowsers") ?? []
+        let list = UserDefaults.standard.stringArray(forKey: Constants.Keys.hiddenBrowsers) ?? []
         return list.contains(bundleId)
     }
 }

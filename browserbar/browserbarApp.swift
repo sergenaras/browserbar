@@ -208,7 +208,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             
             let window = NSWindow(contentViewController: hostingController)
             window.title = Localization.string(.settingsTitle)
-            window.setContentSize(NSSize(width: 450, height: 250))
+            window.setContentSize(NSSize(width: Constants.Window.width, height: Constants.Window.height))
             window.styleMask = [.titled, .closable, .miniaturizable]
             window.center()
             window.isReleasedWhenClosed = false
