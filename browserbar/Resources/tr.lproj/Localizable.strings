@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings (Turkish)
+*/
+
+"settings.title" = "Ayarlar";
+"settings.general" = "Genel";
+"settings.browsers" = "Tarayıcılar";
+"settings.about" = "Hakkında";
+"settings.launchAtLogin" = "Başlangıçta Çalıştır";
+"settings.browserList" = "Görünen Tarayıcılar";
+"settings.browserListDesc" = "Menüde hangi tarayıcıların görüneceğini seçin.";
+"menu.browsers" = "Tarayıcılar";
+"menu.settings" = "Ayarlar...";
+"menu.quit" = "Çıkış";
+"about.title" = "BrowserSwitcher";
+"about.desc" = "macOS'te varsayılan tarayıcıyı değiştirmenin en basit yolu.";
+"about.version" = "Sürüm 1.0";
+"about.footer" = "https://github.com/sergenaras";

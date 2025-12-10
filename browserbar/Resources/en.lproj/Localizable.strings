@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings (English)
+*/
+
+"settings.title" = "Settings";
+"settings.general" = "General";
+"settings.browsers" = "Browsers";
+"settings.about" = "About";
+"settings.launchAtLogin" = "Launch at Login";
+"settings.browserList" = "Visible Browsers";
+"settings.browserListDesc" = "Toggle which browsers appear in the menu.";
+"menu.browsers" = "Browsers";
+"menu.settings" = "Settings...";
+"menu.quit" = "Quit";
+"about.title" = "BrowserSwitcher";
+"about.desc" = "The simplest way to toggle your default browser on macOS.";
+"about.version" = "Version 1.0";
+"about.footer" = "https://github.com/sergenaras";
