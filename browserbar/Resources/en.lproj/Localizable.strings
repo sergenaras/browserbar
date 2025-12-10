@@ -7,6 +7,8 @@
 "settings.browsers" = "Browsers";
 "settings.about" = "About";
 "settings.launchAtLogin" = "Launch at Login";
+"settings.launchAtLoginDescOn" = "BrowserBar will start automatically when you log in.";
+"settings.launchAtLoginDescOff" = "BrowserBar will not start automatically.";
 "settings.browserList" = "Visible Browsers";
 "settings.browserListDesc" = "Toggle which browsers appear in the menu.";
 "menu.browsers" = "Browsers";

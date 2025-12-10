@@ -74,7 +74,7 @@ struct GeneralSettingsView: View {
             .padding(.horizontal)
             
             // Explanation text
-            Text(launchAtLogin ? "BrowserBar will start automatically when you log in." : "BrowserBar will not start automatically.")
+            Text(launchAtLogin ? Localization.string(.settingsLaunchAtLoginDescOn) : Localization.string(.settingsLaunchAtLoginDescOff))
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .frame(maxWidth: .infinity, alignment: .leading)

@@ -1,0 +1,41 @@
+name: Build BrowserBar
+
+on:
+  push:
+    branches: [ "main" ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Xcode version
+      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+    - name: Build App
+      run: |
+        xcodebuild -project browserbar.xcodeproj \
+                   -scheme browserbar \
+                   -configuration Release \
+                   -derivedDataPath build/ \
+                   clean build \
+                   CODE_SIGN_IDENTITY="" \
+                   CODE_SIGNING_REQUIRED=NO \
+                   CODE_SIGNING_ALLOWED=NO
+
+    - name: Create Archive
+      run: |
+        cd build/Build/Products/Release/
+        tar -czf BrowserBar.tar.gz browserbar.app
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: BrowserBar-App
+        path: build/Build/Products/Release/BrowserBar.tar.gz

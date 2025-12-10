@@ -7,6 +7,8 @@
 "settings.browsers" = "Tarayıcılar";
 "settings.about" = "Hakkında";
 "settings.launchAtLogin" = "Başlangıçta Çalıştır";
+"settings.launchAtLoginDescOn" = "BrowserBar oturum açtığınızda otomatik başlayacak.";
+"settings.launchAtLoginDescOff" = "BrowserBar otomatik başlamayacak.";
 "settings.browserList" = "Görünen Tarayıcılar";
 "settings.browserListDesc" = "Menüde hangi tarayıcıların görüneceğini seçin.";
 "menu.browsers" = "Tarayıcılar";
