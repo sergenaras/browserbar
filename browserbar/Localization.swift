@@ -73,7 +73,7 @@ struct Localization {
         case .menuQuit: return isTurkish ? "Çıkış" : "Quit"
         case .aboutTitle: return "BrowserBar"
         case .aboutDesc: return isTurkish ? "macOS'te varsayılan tarayıcıyı değiştirmenin en basit yolu." : "The simplest way to toggle your default browser on macOS."
-        case .aboutVersion: return isTurkish ? "Sürüm 1.0" : "Version 1.0"
+        case .aboutVersion: return isTurkish ? "Sürüm 1.5.2" : "Version 1.5.2"
         case .aboutFooter: return "https://github.com/sergenaras"
         }
     }
