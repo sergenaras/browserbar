@@ -26,3 +26,4 @@ Package.pins
 
 # CocoaPods
 Pods/
+build_local/
