@@ -1,17 +1,25 @@
 # BrowserBar
 
-macOS'te varsayılan tarayıcıyı değiştirmenin en basit yolu.
-The simplest way to toggle your default browser on macOS.
+macOS'te varsayılan tarayıcıyı değiştirmenin ve yönetmenin en basit yolu.
 
-#1. Go to the **[Releases](https://github.com/sergenaras/browserbar/releases)** page.
-2. Download the latest `BrowserBar.zip`.
-3. Unzip and run!
+## Kurulum
+Kaynak kodla uğraşmanıza gerek yok!
 
-> Note: Since this is an open-source app, you may need to **Right Click** the app and select **Open** the first time.
+1. **[Releases (Sürümler)](https://github.com/sergenaras/browserbar/releases)** sayfasına gidin.
+2. En son sürümdeki `BrowserBar.zip` dosyasını indirin.
+3. Dosyayı zipten çıkarın ve şuu komutu yürütün.
+```bash
+   xattr -cr BrowserBar.app
+```
+4. Uygulamalar klasörüne atıp çalıştırın!
 
-## Troubleshooting
-**"App is damaged and can't be opened"**
-This is a common macOS security check for apps downloaded from the internet. To fix it:
-1. Open Terminal.
-2. Run this command: `xattr -cr /Applications/BrowserBar.app` (or wherever you placed the app).
-3. Try opening it again.
+## Alternatif: Kaynak Koddan Derleme
+Eğer geliştiriciyseniz veya kodu kendiniz derlemek isterseniz:
+
+1. Projeyi klonlayın:
+   ```bash
+   git clone https://github.com/sergenaras/browserbar.git
+   ```
+2. `browserbar.xcodeproj` dosyasını Xcode ile açın.
+3. Sol üstten "BrowserBar" şemasını seçin.
+4. **Cmd + R** tuşlarına basarak veya "Play" butonuna tıklayarak uygulamayı çalıştırın.
