@@ -1,6 +1,6 @@
 # BrowserBar
 
-macOS'te varsayılan tarayıcıyı değiştirmenin ve yönetmenin en basit yolu.
+MacOS'te varsayılan tarayıcıyı bar üzerinden değiştirin.
 
 ## Kurulum
 Kaynak kodla uğraşmanıza gerek yok!
